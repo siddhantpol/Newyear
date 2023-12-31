@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Year's Eve Party</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow: hidden; /* Hide scroll bars for video background */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+        }
+
+        section {
+            position: relative;
+            overflow: hidden;
+            flex-grow: 1; /* Ensure the section takes up remaining vertical space */
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the video covers the entire container */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Adjust the overlay color and transparency */
+        }
+
+        h1, p {
+            color: #fff;
+            z-index: 1;
+        }
+
+        .party-details {
+            background-color: rgba(255, 255, 255, 0.8); /* Adjust the background color and transparency */
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center the text */
+            z-index: 1;
+            position: relative;
+            margin: auto; /* Center the details horizontally */
+            max-width: 600px; /* Set a maximum width */
+        }
+
+        .party-details img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            background-color: #e8491d;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #333;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 2;
+        }
+
+        @media (max-width: 600px) {
+            .party-details {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>New Year's Eve Party</h1>
+    </header>
+
+    <section>
+        <video autoplay muted loop>
+            <source src="party-video.mp4" type="video/mp4"> <!-- Update with your video file -->
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="overlay"></div>
+
+        <div class="party-details">
+            <img src="party-image.jpg" alt="New Year's Eve Party">
+            <p>Celebrate the arrival of the New Year with us! Join our spectacular New Year's Eve party on December 31st.</p>
+            <p>Highlights:</p>
+            <ul>
+                <li>Live music and entertainment(ULTI sessions might happen)</li>
+                <li>Dancing all night long(2:30 max bhai sorry)</li>
+                <li>Delicious food and drinks(TTMM)</li>
+                <li>Countdown to midnight(LMAO maybe..koi cake leke aao 12 ko katne)</li>
+            </ul>
+            <p>Don't miss the fun! Grab your friends and make it a night to remember.</p>
+            <a href="RSVP.html" class="cta-button">RSVP Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy;Siddhant Pol</p>
+    </footer>
+</body>
+</html>
